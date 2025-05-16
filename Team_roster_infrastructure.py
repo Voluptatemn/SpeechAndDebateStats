@@ -8,7 +8,7 @@ import pandas as pd
 import numpy as np
 import regex as re
 
-Directory = "C:/Users/rebec/OneDrive/Desktop/Speech and Debate/Team Code"
+Directory = "/Users/qiangangsamwang/Documents/speechanddebate/stats"
 # The ID and range of a sample spreadsheet.
 
 def get_sheet_values(SPREADSHEET_ID,RANGE_NAME, SCOPES, token_name, directory = Directory):
@@ -53,6 +53,8 @@ def convert_to_sheets(dataframe, spreadsheetID, rangeName, creds = None):
     '''Makes the column names of a dataframe the first row of the dataframe. Then uploads dataframe to Google Sheets'''
     first_row = pd.DataFrame(data = [dataframe.columns], columns = dataframe.columns)
     df = pd.concat([first_row, dataframe])
+    
+    # wonder what is the work flow here: is it that every term we update the spreadsheet_id?
     
     spreadsheet_id = '1KTmWPY-huDOmhLX0pPkJp9TyhZR0U5tzn-dg9-3TbGk'
     range_name = 'WI23 Attendance'
