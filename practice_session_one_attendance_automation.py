@@ -1,4 +1,6 @@
-# Updated Code as of 04/03/2026
+# Update on 04/03/2026: i did fix it, but not too much lmao
+# Update on 1/13/2026: as of right now, this file is the exact same thing as the team attendance automation file lmao. i'll fix it after the mcat
+# Update on 1/26/2026: we all good now I think!
 
 from __future__ import print_function
 import os.path
@@ -16,13 +18,13 @@ from tabulate import tabulate
 
 # os.remove("token_team.json")
 # CHANGE THIS LINE EVERY YEAR: Just the first parameter, Should be the actual GBM attendance generator Google Sheet's ID
-attendance_backend = Spreadsheet('1yFfhjvJZkzwARv-XCr2kahS9_HyLhPKKRioNPc65uQQ', "backend","token_team.json",
+attendance_backend = Spreadsheet('1m6EanAIKENeJ67LODYCsUr-AdIljhdkIrLLavrJF-Q4', "backend 1","token_team.json",
                                  directory = "C:/Users/mhu54/Desktop/Speech and Debate/Team Code")
 
 # CHANGE THIS LINE EVERY YEAR: Link to the google sheet tracking all team members GBM attendance
 # make sure spreadsheet is in regular google sheets formate, not xlsx
-team_roster = Spreadsheet2('https://docs.google.com/spreadsheets/d/1zCO_xlnnBK-p_GGzXUmqazOsAVgc91_M70tbL3b1cXE/edit?gid=202879056#gid=202879056',
-                           "WI26 Attendance","token_team.json")
+team_roster = Spreadsheet2('https://docs.google.com/spreadsheets/d/14gePz-2Niy2iiIPeiDuB0dOEpSS9iQl3-Z6zTCN6_Dk/edit?gid=621211844#gid=621211844',
+                           "First Session Attendance","token_team.json")
 
 
 # team_roster.dataframe["Excused Absences"] = 0
