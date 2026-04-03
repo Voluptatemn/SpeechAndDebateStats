@@ -9,20 +9,20 @@ from google.oauth2.credentials import Credentials
 import pandas as pd
 import os
 import numpy as np
-from team_roster_infrastructure import Spreadsheet
-from team_roster_infrastructure import Spreadsheet2
+from Team_roster_infrastructure import Spreadsheet
+from Team_roster_infrastructure import Spreadsheet2
 import time
 from tabulate import tabulate
 
 # os.remove("token_team.json")
 # CHANGE THIS LINE EVERY YEAR: Just the first parameter, Should be the actual GBM attendance generator Google Sheet's ID
 attendance_backend = Spreadsheet('1yFfhjvJZkzwARv-XCr2kahS9_HyLhPKKRioNPc65uQQ', "backend","token_team.json",
-                                 directory = "C:/Users/mhu54/Desktop/Speech and Debate/Team Code")
+                                 directory = "/Users/qiangangsamwang/UCSD/SpeechAndDebateStats")
 
 # CHANGE THIS LINE EVERY YEAR: Link to the google sheet tracking all team members GBM attendance
 # make sure spreadsheet is in regular google sheets formate, not xlsx
-team_roster = Spreadsheet2('https://docs.google.com/spreadsheets/d/1zCO_xlnnBK-p_GGzXUmqazOsAVgc91_M70tbL3b1cXE/edit?gid=202879056#gid=202879056',
-                           "WI26 Attendance","token_team.json")
+team_roster = Spreadsheet2('https://docs.google.com/spreadsheets/d/1JYRYAStQRGc50iPXdOHaYq79sUEIhxqvdAcW5MNBf4o/edit?gid=1223180495#gid=1223180495',
+                           "SP26 Attendance","token_team.json")
 
 
 # team_roster.dataframe["Excused Absences"] = 0
